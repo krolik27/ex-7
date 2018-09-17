@@ -1,0 +1,60 @@
+@import "variables";
+  
+ footer {
+  width: 100%;
+  background-color: $color3;
+  margin: auto;
+  padding: 60px 0;
+  box-sizing: border-box;
+  color: $color1;
+  @include font(300, 1em, 24px, center, $font1);
+  & p{
+  margin-bottom: 0;
+}
+}
+
+.foot_bottom_social {
+  margin: 0 30px 30px 30px;
+  height: 20px;
+  padding: 0;
+  display: block;
+}
+
+.bottom_social {
+  display: inline-block;
+  width: 25px;
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 29px;
+}
+
+.fb {
+  background: $url1 0 0;
+}
+
+a.fb:hover {
+  background: $url1 0 -20px;
+}
+
+.twt {
+  background: $url1 -40px 0;
+}
+
+a.twt:hover {
+  background: $url1 -40px -20px;
+}
+
+.google_plus {
+  background: $url1 -132px 0;
+}
+
+a.google_plus:hover {
+  background: $url1 -132px -20px;
+}
+
+.insta {
+  background: $url1 -85px 0;
+}
+a.insta:hover {
+  background: $url1 -85px -20px;
+}

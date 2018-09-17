@@ -1,0 +1,35 @@
+@mixin font-face($name, $path, $weight, $style, $exts: eot woff2 woff ttf svg) {
+	$src: null;
+
+	$extmods: (
+		eot: "?",
+		svg: "#" + str-replace($name, " ", "_")
+	);
+
+	$formats: (
+		otf: "opentype"
+	);
+
+	@each $ext in $exts {
+		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+		$src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+	}
+
+	@font-face {
+		font-family: quote($name);
+		font-style: $style;
+		font-weight: $weight;
+		src: local(quote($name))+", "+$src;
+	}
+}
+
+@include font-face('robotolight', "fonts/roboto-light-webfont", normal, 300, ttf woff woff2);
+@include font-face('robotomedium', "fonts/roboto-medium-webfont", normal, 500, ttf woff woff2);
+@include font-face('robotoregular', "fonts/roboto-regular-webfont", normal, 400, ttf woff woff2);
+
+@include font-face('dosisbold', "fonts/dosis-bold-webfont", normal, 700, ttf woff woff2);
+@include font-face('dosissemibold', "fonts/dosis-semibold-webfont", normal, 600, ttf woff woff2);
+@include font-face('dosismedium', "fonts/dosis-medium-webfont", normal, 500, ttf woff woff2);
+@include font-face('dosisregular', "fonts/dosis-regular-webfont.woff2", normal, 400, ttf woff woff2);
+

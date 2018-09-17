@@ -1,0 +1,54 @@
+@import "variables";
+hr {
+  color: $color4;
+  width: $width/1.6;
+}
+
+.pluses {
+  width: 100%;
+  @include font(300, 1em, 24px, left, $font1);
+  color: $color5;
+  padding: 120px 0;
+  @include flex(flex, row, center);
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  align-self: center;
+  
+  & img {
+  padding: 0 26px 30px 0;
+  float: left;
+}
+}
+
+.summary_header {
+  display: block;
+  @include font(500, 1.7em, 24px, left, $font5);
+  color: $color3;
+  margin-bottom: 20px;
+  margin-top: 38px;
+}
+
+summary {
+  outline: none;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details {
+  margin-right: 40px;
+  margin-left: 40px;
+  clear: both;
+  box-sizing: border-box;
+& p {
+  margin-left: 100px;
+}
+}
+
+details,
+summary {
+  display: block;
+  width: 400px;
+  cursor: pointer;
+}

@@ -1,0 +1,139 @@
+@import "variables";
+
+
+@include screen1('big_desktop') {
+.customers_block li {
+  height: 273px;
+  width: 360px;
+  padding: 30px 43px 30px 30px;
+}
+#slides {
+  max-width: 61%;
+  padding: 10px 150px;
+& .mask {
+  height: 273px;
+}
+}
+#slide1:checked~.mask .customers_block {
+  transform: translateX(0);}
+#slide2:checked~.mask .customers_block {
+  transform: translateX(-34%);}
+#slide3:checked~.mask .customers_block {
+  transform: translateX(-68%);}
+#slide4:checked~.mask .customers_block {
+  transform: translateX(-103%);}
+}
+
+
+
+
+@media only screen and (max-width: 479px) {
+  /*Мобильные устройства: Android, iPhone  и так далее.*/
+  .template {
+    color: #ffffff;
+    background: -webkit-linear-gradient(0deg, #fd712c 0%, #f21780 100%);
+    background: -moz-linear-gradient(0deg, #fd712c 0%, #f21780 100%);
+    background: -o-linear-gradient(0deg, #fd712c 0%, #f21780 100%);
+    background: -ms-linear-gradient(0deg, #fd712c 0%, #f21780 100%);
+    background: linear-gradient(90deg, #fd712c 0%, #f21780 100%);
+    background-size: 100%;
+  }
+  body {
+    font-size: 12px;
+  }
+  main {
+    max-width: 479px;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  /*Мобильные устройства: Android, iPhone  и так далее.*/
+  body {
+    font-size: 12px;
+  }
+  main {
+    max-width: 599px;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  /*Мобильные устройства: Android, iPhone  и так далее.*/
+  body {
+    font-size: 12px;
+  }
+  main {
+    max-width: 768px;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /*Планшеты в режиме portrait.*/
+  body {
+    font-size: 12px;
+  }
+  main {
+    max-width: 869px;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 870px) {
+  /*Планшеты в режиме landscape, нетбуки, ноутбуки, десктоп.*/
+    body {
+    font-size: 12px;
+  }
+  main {
+    max-width: 990px;
+    width: 100%;
+  }
+  footer {
+  padding: 40px;
+}
+}
+@media only screen and (min-width: 992px) {
+  /*Планшеты в режиме landscape, нетбуки, ноутбуки, десктоп.*/
+  body {
+    font-size: 13px;
+  }
+  main {
+    max-width: 1199px;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  /*Десктоп с большими разрешениями, телевизоры.*/
+  body {
+    font-size: 14px;
+  }
+  main {
+    max-width: 1359px;
+    width: 100%;
+}
+}
+
+@media only screen and (min-width: 1360px) {
+  /*Десктоп с большими разрешениями, телевизоры.*/
+  body {
+    font-size: 15px;
+  }
+  main {
+    max-width: 1599px;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  /*Десктоп с большими разрешениями, телевизоры.*/
+  body {
+    font-size: 16px;
+  }
+  main {
+    max-width: 1919px;
+    width: 100%;
+  }
+}
+

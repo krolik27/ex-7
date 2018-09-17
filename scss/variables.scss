@@ -1,0 +1,120 @@
+$color1: #ffffff;
+$color2: #8B008B;
+$color3: #222222;
+$color4: #ababab;
+$color5: #777777;
+$color6: #f7fafc;
+$color7: #aaaaaa;
+$color8: #333333;
+$color9: #eeeeee;
+@mixin flex($display, $direction, $justify){
+  display: $display;
+  flex-direction: $direction;
+  justify-content: $justify;
+}
+$width: 1920px;
+$font-size: 16px;
+
+$font1: 'robotolight', 'Arial', sans-serif;
+$font2: 'robotomedium', 'Arial', sans-serif;
+$font3: 'robotoregular', 'Arial', sans-serif;
+$font4: 'dosisbold', Verdana, Geneva, sans-serif;
+$font5: 'dosissemibold', Verdana, Geneva, sans-serif ;
+$font6: 'dosismedium', Verdana, Geneva, sans-serif;
+$font7: 'dosisregular', Verdana, Geneva, sans-serif;
+
+$transform1: scale(1.15, 1.15);
+
+@mixin font($weight, $size, $lineheight, $align, $family){
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $lineheight;
+  text-align: $align;
+  font-family: $family;
+}
+$url1: url(img/social.png);
+
+@mixin screen1($size) {
+  $big_desktop: "(min-width: 1199px)";
+  @if $size == big_desktop {
+    @media screen and #{$big_desktop} {
+      @content;
+    }
+  }
+}
+@mixin screen2($size) {
+  $desktop: "(min-width: 800px)";
+  @if $size == desktop {
+    @media screen and #{$desktop} {
+      @content;
+    }
+  }
+}
+@mixin screen3($size) {
+  $big_tablet: "(max-width: 900px)";
+  @if $size == big_tablet {
+    @media screen and #{$big_tablet} {
+      @content;
+    }
+  }
+}
+@mixin screen4($size) {
+  $medium_tablet: "(max-width: 800px)";
+  @if $size == medium_tablet {
+    @media screen and #{$medium_tablet} {
+      @content;
+    }
+  }
+}
+@mixin screen5($size) {
+  $small_tablet: "(max-width: 600px)";
+  @if $size == small_tablet {
+    @media screen and #{$small_tablet} {
+      @content;
+    }
+  }
+}
+@mixin screen6($size) {
+  $mobile: "(max-width: 479px)";
+  @if $size == mobile {
+    @media screen and #{$mobile} {
+      @content;
+    }
+  }
+}
+
+@mixin screen7($size) {
+  $big_mobile: "(min-width:480px) and (max-width:800px)";
+  @if $size == big_mobile {
+    @media screen and #{$big_mobile} {
+      @content;
+    }
+  }
+}
+
+@mixin screen8($size) {
+  $tablet: "(min-width:599px) and (max-width:900px)";
+  @if $size == tablet {
+    @media screen and #{$tablet} {
+      @content;
+    }
+  }
+}
+
+@mixin screen9($size) {
+  $mdesktop: "(min-width:799px) and (max-width:1200px)";
+  @if $size == mdesktop {
+    @media screen and #{$mdesktop} {
+      @content;
+    }
+  }
+}
+
+@mixin screen10($size) {
+  $bdesktop: "(min-width:899px) and (max-width:1300px)";
+  @if $size == bdesktop {
+    @media screen and #{$bdesktop} {
+      @content;
+    }
+  }
+}

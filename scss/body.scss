@@ -1,0 +1,39 @@
+@import "variables";
+
+html {
+  min-height: 100%;
+  @include flex(flex, column, center);
+  max-width: $width;
+}
+
+body {
+  @include flex(flex, column, center);
+  height: 100%;
+  overflow-x: hidden;
+  flex: auto;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0 auto;
+  transition: .5s ease-in-out;
+  box-sizing: border-box;
+  font-size: $font-size;
+}
+
+main {
+  max-width: $width;
+  width: 100%;
+  margin: auto;
+  flex-grow: 1;
+  box-sizing: border-box;
+  @include flex(flex, column, center);
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+img {
+  object-fit: cover;
+  display: block;
+}

@@ -1,0 +1,26 @@
+@import "variables";
+.mobile {
+  width: 100%;
+  @include font(300, 1em, 24px, left, $font1);
+  color: $color5;
+  padding:  120px 0;
+  @include flex(flex, row, center);
+  flex-wrap: wrap-reverse;
+& img{
+  transform: scale(1.3);
+  margin: -100px 50px 0 0;
+  padding: 0;
+}
+}
+h3 {
+  @include font(500, 2.5em, 30px, left, $font5);
+  color: $color3;
+}
+
+.mobile-paragraph {
+  padding-top: 65px;
+}
+
+.mobile ul {
+  padding: 25px 0 20px 0;
+}

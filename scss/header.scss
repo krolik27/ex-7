@@ -1,0 +1,138 @@
+@import "variables";
+
+.template {
+  background: url(img/iPhones.png) no-repeat bottom right, -webkit-linear-gradient(0deg, #fd712c 0%, #f21780 100%);
+  background: url(img/iPhones.png) no-repeat bottom right, -moz-linear-gradient(0deg, #fd712c 0%, #f21780 100%);
+  background: url(img/iPhones.png) no-repeat bottom right, -o-linear-gradient(0deg, #fd712c 0%, #f21780 100%);
+  background: url(img/iPhones.png) no-repeat bottom right, -ms-linear-gradient(0deg, #fd712c 0%, #f21780 100%);
+  background: url(img/iPhones.png) no-repeat bottom right, linear-gradient(90deg, #fd712c 0%, #f21780 100%);
+  background-size: 50%, 100%;
+  padding: 30px 11.41% 219px 11.41%;
+  @include font(300, 0.88em, 24px, left, $font1);
+  color: $color1;
+   width: 100%;
+   box-sizing: border-box;
+& h1 {
+  @include font(600, 3.6em, 60px, left, $font4);
+  color: $color1;
+}
+}
+
+.header {
+  @include flex(flex, row, space-between);
+  width: 100%;
+}
+
+.header-nav a:hover {
+  color: $color2;
+}
+
+a.header_logo:hover {
+  transform: $transform1;
+  color: $color1;
+& .header_logo svg{
+  transform: $transform1;
+}
+}
+
+.header_logo {
+  display: flex;
+  align-self: center;
+  align-items: flex-end;
+  @include font(700, 2.3em, 24px, left, $font4);
+  color: $color1;
+   & svg{
+  fill: $color1;
+}
+}
+.header-list {
+  align-items: center;
+  display: flex;
+  list-style-type: none;
+  margin-top: -10px;
+   & a {
+  padding-right: 42px;
+  @include font(400, 1em, 24px, right, $font3);
+  color: $color1;
+}
+}
+
+.header-list .header_button,
+.start_button {
+  color: $color3;
+  background-color: $color1;
+  @include font(500, 1em, 30px, center, $font3);
+  padding: 7px 20px;
+  border-radius: 20px;
+  border: 2px solid transparent;
+  &:hover {
+  color: $color1;
+  border: 2px solid $color1;
+  background-color: transparent;
+}
+ &:active {
+  border: 2px solid #445162;
+}
+}
+.header_text {
+  margin-top: 13%;
+& ul {
+  padding: 0 0 20px 0;
+}
+& li {
+  list-style: none;
+  background: url(img/point.png) no-repeat 0 4px;
+  padding-left: 24px;
+}
+}
+.labmenu {
+  position: relative;
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  display: none;
+  border: 1px solid $color1;
+  margin: 0;
+  padding: 0;
+&:after {
+  content: 'Menu';
+  position: absolute;
+  width: 100%;
+  @include font(700, 13px, 20px, center, $font3);
+  left: 2px;
+  top: 35px;
+}
+}
+
+.labmenu span,
+.labmenu span:before,
+.labmenu span:after {
+  position: absolute;
+  left: 10px;
+  top: 22px;
+  width: 40px;
+  height: 4px;
+  background: $color1;
+  border-radius: 0.2em;
+}
+
+.labmenu span:before,
+.labmenu span:after {
+  content: '';
+  left: 0;
+}
+
+.labmenu span:before {
+  top: -8px;
+}
+
+.labmenu span:after {
+  top: 8px;
+}
+#menu {
+  visibility: hidden;
+}
+input[type="checkbox"]:checked ~ .header-list {
+  visibility: visible;
+}

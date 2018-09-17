@@ -1,0 +1,51 @@
+@import "variables";
+.video {
+   width: 100%;
+   height: 400px;
+  position: relative;
+}
+video {
+  -o-object-fit: cover;
+  object-fit: cover;
+  position: relative;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -10;
+  filter: brightness(30%);
+  -webkit-filter: brightness(30%); 
+}
+.play_button {
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  background: url(img/play_icon.svg) no-repeat 50% 50%;
+  background-size: 22px 25px;
+  display: inline-block;
+  padding: 30px;
+  border-radius: 50%;
+  color: transparent;
+  position: absolute;
+  cursor: pointer;
+  border: 1px solid $color5;
+  outline: none;
+&:hover {
+  background: url(img/play_icon.svg) no-repeat 50% 50%, -webkit-linear-gradient(0deg, #fd712c 0%, #f21780 100%);
+  background: url(img/play_icon.svg) no-repeat 50% 50%, -moz-linear-gradient(0deg, #fd712c 0%, #f21780 100%);
+  background: url(img/play_icon.svg) no-repeat 50% 50%, -o-linear-gradient(0deg, #fd712c 0%, #f21780 100%);
+  background: url(img/play_icon.svg) no-repeat 50% 50%, -ms-linear-gradient(0deg, #fd712c 0%, #f21780 100%);
+  background: url(img/play_icon.svg) no-repeat 50% 50%, linear-gradient(90deg, #fd712c 0%, #f21780 100%);
+}
+&:active {
+  background: url(img/play_icon.svg) no-repeat 50% 50%, -webkit-linear-gradient(0deg, #fd712c 0%, #f21780 100%);
+  background: url(img/play_icon.svg) no-repeat 50% 50%, -moz-linear-gradient(0deg, #fd712c 0%, #f21780 100%);
+  background: url(img/play_icon.svg) no-repeat 50% 50%, -o-linear-gradient(0deg, #fd712c 0%, #f21780 100%);
+  background: url(img/play_icon.svg) no-repeat 50% 50%, -ms-linear-gradient(0deg, #fd712c 0%, #f21780 100%);
+  background: url(img/play_icon.svg) no-repeat 50% 50%, linear-gradient(90deg, #fd712c 0%, #f21780 100%);
+  box-shadow: 1px 1px 4px 4px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 1px 1px 4px 4px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 1px 1px 4px 4px rgba(0, 0, 0, 0.2);
+}
+}
+

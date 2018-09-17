@@ -1,0 +1,114 @@
+@import "variables";
+.customers {
+   width: 100%;
+  padding: 120px 0;
+  @include font(300, 1em, 24px, center, $font1);
+  color: $color5;
+  @include flex(flex, column, center);
+  box-sizing: border-box;
+  align-items: center;
+& h3 {
+  @include font(500, 2.5em, 30px, center, $font5);
+  color: $color3;
+}
+}
+
+#slides {
+  display: inline-block;
+  overflow: hidden;
+  margin: 80px 10px 10px 10px;
+  position: relative;
+& .mask {
+  overflow: hidden;
+  height: 273px;
+  padding: 10px;
+}
+}
+.customers_block {
+  white-space: nowrap;
+  padding: 0;
+  margin: 0;
+  border: none;
+  -webkit-transform: translateZ(0);
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+& li {
+  box-sizing: border-box;
+  white-space: normal;
+  display: inline-block;
+  clear: both;
+  text-align: left;
+  background-color: #f7fafc;
+  margin-right: 30px;
+}
+}
+.customers_item:hover {
+  background-color: $color1;
+  box-shadow: 1px 1px 19px 4px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 1px 1px 19px 4px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 1px 1px 19px 4px rgba(0, 0, 0, 0.3);
+}
+
+.customers_item img {
+  padding-right: 20px;
+  float: left;
+}
+
+.customers_item span {
+  padding-top: 20px;
+  @include font(400, 1.2em, 24px, left, $font7);
+  color: $color3;
+  display: block;
+}
+
+#slides input {
+  display: none;
+}
+
+#controls label {
+  display: none;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  background: url(img/arrow.png) center no-repeat;
+  background-size: 15px;
+  background-color: $color1;
+  border-radius: 50%;
+  border: 1px solid $color9;
+}
+
+#controls label:hover {
+  background: url(img/arrow2.png) center no-repeat, -webkit-linear-gradient(0deg, #fd712c 0%, #f21780 100%);
+  background: url(img/arrow2.png) center no-repeat, -moz-linear-gradient(0deg, #fd712c 0%, #f21780 100%);
+  background: url(img/arrow2.png) center no-repeat, -o-linear-gradient(0deg, #fd712c 0%, #f21780 100%);
+  background: url(img/arrow2.png) center no-repeat, -ms-linear-gradient(0deg, #fd712c 0%, #f21780 100%);
+  background: url(img/arrow2.png) center no-repeat, linear-gradient(90deg, #fd712c 0%, #f21780 100%);
+  background-size: 15px, 40px;
+  box-shadow: 1px 1px 4px 4px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 1px 1px 4px 4px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 1px 1px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+#slide1:checked~#controls label:nth-child(2),
+#slide2:checked~#controls label:nth-child(3),
+#slide3:checked~#controls label:nth-child(4),
+#slide4:checked~#controls label:nth-child(1) {
+  right: 0;
+  top: 50%;
+  display: block;
+}
+
+#slide1:checked~#controls label:nth-child(4),
+#slide2:checked~#controls label:nth-child(1),
+#slide3:checked~#controls label:nth-child(2),
+#slide4:checked~#controls label:nth-child(3) {
+  left: 0;
+  top: 50%;
+  display: block;
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(180deg);
+}
